@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+Hello!
+
+<p th:text="${mySender}"/>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>Name</td>
+        <td>SurName</td>
+        <td>id pos</td>
+    </tr>
+
+
+
+    <th:block th:each="person : ${persons}">
+        <tr>
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.surname}"></td>
+            <td th:text="${person.position.name}"></td>
+        </tr>
+    </th:block>
+
+
+
+</table>
+</body>
+</html>
